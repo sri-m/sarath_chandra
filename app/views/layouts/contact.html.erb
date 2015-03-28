@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sarath</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="main">		
+
+    <header>
+	  <div id="strapline">
+	    <!-- logo -->
+	    <%= render :partial => "registrations/logo" %>
+      </div><!--close strapline-->	  
+	  <!-- menu -->
+	  <%= render :partial => "registrations/menu" %>
+    </header>
+    
+    <div id="slideshow_container">  
+	 	<!-- slider --> 	
+	 	<%= render :partial => "registrations/slider" %>
+	</div><!--close slideshow_container-->   
+	
+	<div id="site_content">		
+	  
+	  <div class="sidebar_container">       
+			<!-- right partial -->
+			<%#= render :partial => "registrations/right" %>
+       </div><!--close sidebar_container-->	
+	   
+	  <div id="content">
+        <div class="content_item">
+			<%= yield %>		  
+		</div><!--close content_item-->
+      </div><!--close content-->   
+	</div><!--close site_content-->  	
+
+    <!-- footer -->
+	<%= render :partial => "registrations/footer" %>
+  </div><!--close main-->
+  
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/image_slide.js"></script>
+  
+</body>
+
+</html>
