@@ -1,0 +1,2 @@
+module MyCookyHelper
+end

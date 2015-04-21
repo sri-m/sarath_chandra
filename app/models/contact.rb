@@ -9,4 +9,5 @@ class Contact < ActiveRecord::Base
     validates :cell, length: { is: 10 }
     validates :address, length: { maximum: 200 }
     
+    
 end

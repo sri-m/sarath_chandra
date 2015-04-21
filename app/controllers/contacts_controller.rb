@@ -4,13 +4,14 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   #after_action :send_mail, only: [:create, :update]
-
+  respond_to :xml
   def send_mail
     UserMailer.my_mails(@contact).deliver
   end
 
   def index
     @contacts = Contact.all
+    respond_with @contacts
   end
 
   # GET /contacts/1
@@ -21,6 +22,8 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   def new
     @contact = Contact.new
+    @name = cookies[:my_name]
+    @loc = cookies[:loc]
   end
 
   # GET /contacts/1/edit

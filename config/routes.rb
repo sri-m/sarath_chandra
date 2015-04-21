@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
  
 
+  get 'my_cooky/set_cookie'
+
+  get 'my_cooky/show_cookie'
+
+  get 'my_cooky/delete_cookie'
+
+  get 'my_service/my_api'
+
   devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :my_registrations

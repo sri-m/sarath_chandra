@@ -19,7 +19,7 @@ gem 'thin'
 gem 'activeadmin', github: 'gregbell/active_admin'   #activeadmin supports kaminari
 gem "kaminari"
 gem 'devise'
-
+gem 'nokogiri'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
